@@ -1,0 +1,71 @@
+! ublock origin filter for pathofexile.com
+! improves appearance of website, hide intrusive advertisement
+! fix for addon "better poe trading" (firefox version, hides distorted icons)
+! twitch.tv -> disable frontpage video "carousel"
+!
+! select all, copy-paste to ublock origin -> cotrol panel -> my filters or
+! ublock origin -> cotrol panel -> my filters -> import downloaded txt file 
+! tested on firefox, edge, chrome
+! 
+! https://github.com/91KL/pathofexile.com-uBlockOrigin-filter
+! -------------------------------------------------------------------------------------
+! -> pathofexile.com
+! -> pathofexile.com/news
+!
+! ## hides top banner 
+www.pathofexile.com###topSplash > [href="https://www.pathofexile.com/purchase"]
+!
+! ## hides 2nd and 3rd right side buttons 
+www.pathofexile.com##div.deal:nth-of-type(2)
+www.pathofexile.com##div.deal:nth-of-type(3)
+!
+! ## hides right side banner
+www.pathofexile.com###newsItem3
+! -------------------------------------------------------------------------------------
+! -> pathofexile.com/shop 
+!    
+! ## hides top and bottom banners
+www.pathofexile.com###shopTopBanner > [href="https://www.pathofexile.com/purchase"]
+www.pathofexile.com###shopBottopBanner > [href="https://www.pathofexile.com/purchase"]
+!    
+! ## hides some shop categories
+www.pathofexile.com##div.category:nth-of-type(7)
+www.pathofexile.com##[href="/shop/category/back-attachments"]
+www.pathofexile.com##div.category:nth-of-type(11)
+www.pathofexile.com##[href="/shop/category/character-effects"]
+www.pathofexile.com##div.category:nth-of-type(12)
+www.pathofexile.com##[href="/shop/category/footprint-effects"]
+www.pathofexile.com##div.category:nth-of-type(14)
+www.pathofexile.com##[href="/shop/category/guild-hideout"]
+www.pathofexile.com##div.category:nth-of-type(15)
+www.pathofexile.com##[href="/shop/category/pets"]
+www.pathofexile.com##div.category:nth-of-type(16)
+www.pathofexile.com##[href="/shop/category/hideout"]
+! -------------------------------------------------------------------------------------
+! -> pathofexile.com/purchase
+!
+! ## optional, disable video ads or all ads
+!www.pathofexile.com##.left > .packageVideo
+!www.pathofexile.com##.donationPackageList
+! -------------------------------------------------------------------------------------
+! -> pathofexile.com/trade
+!
+! ## fix for addon "better poe trading" (firefox version, hides distorted icons)
+! 
+!www.pathofexile.com##.bt-equivalent-pricings-equivalent.bt-equivalent-pricings > span > [src="https://web.poecdn.com/image/Art/2DItems/Currency/CurrencyRerollRare.png"]
+!
+!www.pathofexile.com##.bt-equivalent-pricings-chaos-fraction.bt-equivalent-pricings > span > [src="https://web.poecdn.com/image/Art/2DItems/Currency/CurrencyRerollRare.png"]
+!
+!www.pathofexile.com##.bt-equivalent-pricings-chaos-fraction.bt-equivalent-pricings > span > [src="https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ3VycmVuY3lBZGRNb2RUb1JhcmUiLCJzY2FsZSI6MX1d/33f2656aea/CurrencyAddModToRare.png"]
+!
+! -------------------------------------------------------------------------------------
+! -> twitch.tv
+!
+! ## disable frontpage video "carousel"
+www.twitch.tv##.front-page-carousel.gRnGwD.Layout-sc-nxg1ff-0
+www.twitch.tv##.featured-content-carousel.kbRvtX.Layout-sc-nxg1ff-0
+www.twitch.tv##.gTIuHP.Layout-sc-nxg1ff-0 > div
+www.twitch.tv##.gTIuHP.Layout-sc-nxg1ff-0
+www.twitch.tv##.headliner-ad.euDmUf.Layout-sc-nxg1ff-0
+www.twitch.tv##.front-page-carousel.glKbrp.Layout-sc-nxg1ff-0
+! -------------------------------------------------------------------------------------

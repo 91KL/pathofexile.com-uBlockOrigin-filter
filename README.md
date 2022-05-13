@@ -1,4 +1,4 @@
-# ublock origin filter for pathofexile.com
+# uBlock Origin filter for pathofexile.com
 
 improves appearance of website, hide intrusive advertisement
 

@@ -7,6 +7,7 @@
 ! ublock origin -> cotrol panel -> my filters -> import downloaded txt file 
 ! tested on firefox, edge, chrome
 ! 
+! https://raw.githubusercontent.com/91KL/pathofexile.com-uBlockOrigin-filter/main/filter_poexilecom.txt
 ! https://github.com/91KL/pathofexile.com-uBlockOrigin-filter
 ! -------------------------------------------------------------------------------------
 ! -> pathofexile.com

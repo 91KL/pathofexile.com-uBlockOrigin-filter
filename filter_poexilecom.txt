@@ -1,11 +1,13 @@
-! ublock origin filter for pathofexile.com
+! ## ublock origin filter for pathofexile.com
+!
 ! improves appearance of website, hide intrusive advertisement
 ! fix for addon "better poe trading" (firefox version, hides distorted icons)
 ! twitch.tv -> disable frontpage video "carousel"
-!
-! select all, copy-paste to ublock origin -> cotrol panel -> my filters or
-! ublock origin -> cotrol panel -> my filters -> import downloaded txt file 
 ! tested on firefox, edge, chrome
+!
+! select all, copy-paste to ublock origin -> cotrol panel -> my filters
+! or
+! ublock origin -> cotrol panel -> my filters -> import downloaded .txt file 
 ! 
 ! https://raw.githubusercontent.com/91KL/pathofexile.com-uBlockOrigin-filter/main/filter_poexilecom.txt
 ! https://github.com/91KL/pathofexile.com-uBlockOrigin-filter
@@ -13,19 +15,22 @@
 ! -> pathofexile.com
 ! -> pathofexile.com/news
 !
-! ## hides top banner 
+! ## hides top shop/purchase banner (supporter packs ad)
 www.pathofexile.com###topSplash > [href="https://www.pathofexile.com/purchase"]
 !
-! ## hides 2nd and 3rd right side buttons 
+! ## hides 2nd and 3rd right side buttons ("deal of the day")
 www.pathofexile.com##div.deal:nth-of-type(2)
 www.pathofexile.com##div.deal:nth-of-type(3)
 !
-! ## hides right side banner
+! ## hides right side banner (mystery box ad)
 www.pathofexile.com###newsItem3
+!
+! ## hides bottom-right merchant link
+www.pathofexile.com##div.column > ul > li > [href="https://www.jinx.com/collections/path-of-exile"]
 ! -------------------------------------------------------------------------------------
 ! -> pathofexile.com/shop 
 !    
-! ## hides top and bottom banners
+! ## hides top and bottom shop/purchase banners (supporter packs, season pass)
 www.pathofexile.com###shopTopBanner > [href="https://www.pathofexile.com/purchase"]
 www.pathofexile.com###shopBottopBanner > [href="https://www.pathofexile.com/purchase"]
 !    
@@ -36,8 +41,8 @@ www.pathofexile.com##div.category:nth-of-type(11)
 www.pathofexile.com##[href="/shop/category/character-effects"]
 www.pathofexile.com##div.category:nth-of-type(12)
 www.pathofexile.com##[href="/shop/category/footprint-effects"]
-www.pathofexile.com##div.category:nth-of-type(14)
-www.pathofexile.com##[href="/shop/category/guild-hideout"]
+!www.pathofexile.com##div.category:nth-of-type(14)
+!www.pathofexile.com##[href="/shop/category/guild-hideout"]
 www.pathofexile.com##div.category:nth-of-type(15)
 www.pathofexile.com##[href="/shop/category/pets"]
 www.pathofexile.com##div.category:nth-of-type(16)
@@ -47,7 +52,10 @@ www.pathofexile.com##[href="/shop/category/hideout"]
 !
 ! ## optional, disable video ads or all ads
 !www.pathofexile.com##.left > .packageVideo
-!www.pathofexile.com##.donationPackageList
+www.pathofexile.com##.donationPackageList
+!
+! ## optional, hides distorted upgrade list above purchase button
+www.pathofexile.com##.rightPanel > div.right > .showUpgrade.contentsContainer > .contents > div
 ! -------------------------------------------------------------------------------------
 ! -> pathofexile.com/trade
 !
